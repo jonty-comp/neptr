@@ -1,11 +1,12 @@
 <?php
 
 class Date {
-	public function output($size_em = 4, $margin_top = 20) {
-		$id = rand(0,1000);
+
+	public function output($args) {
+		$id = rand(0,100000);
 		echo("
 		<style>
-			#date-".$id." { font-weight: bold; font-size: ".$size_em."em; vertical-align: middle; margin-top: ".$margin_top."; }
+			#date-".$id." { font-weight: bold; font-size: ".$args["font_size"]."em; vertical-align: middle; margin-top: ".$args["margin_top"]."; }
 		</style>
 		<script>
 			$().ready(function() {

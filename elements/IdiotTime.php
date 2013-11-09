@@ -2,11 +2,11 @@
 
 class IdiotTime {
 
-	public function output($size_em = 4, $margin_top = 20) {
-		$id = rand(0,1000);
+	public function output($args) {
+		$id = rand(0,100000);
 		echo("
 			<style>
-					#idiot_clock_".$id." { font-size: ".$size_em."em; margin-top: ".$margin_top."px; }
+					#idiot_clock_".$id." { font-size: ".$args["font_size"]."em; margin-top: ".$args["margin_top"]."px; }
 					#idiot_clock_".$id." span { display: none; }
 					#idiot_clock_".$id." span.show { display: inline; }
 			</style>
