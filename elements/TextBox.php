@@ -1,6 +1,6 @@
 <?php
 
-class ScreenName {
+class TextBox {
 	
 	public function output($args) {
 		echo("
