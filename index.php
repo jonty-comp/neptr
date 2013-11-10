@@ -1,6 +1,16 @@
-<?php 
-function __autoload($class_name) { require_once ("elements/".$class_name.".php"); }
-$db = pg_connect("host=localhost port=5432 dbname=switcher user=status_screen password=statusScreenPass");
+<?php
+
+$db_params = array(
+	"host" => "localhost",
+	"port" => 5432,
+	"dbname" => "switcher",
+	"user" => "status_screen",
+	"password" => "statusScreenPass"
+	);
+
+set_include_path(get_include_path().PATH_SEPARATOR."classes/".PATH_SEPARATOR."elements/");
+function __autoload($class_name) { require_once ($class_name.".php"); }
+$db = pg_connect(implode(" ", array_map(function($v, $k){ return $k."=".$v; }, $db_params, array_keys($db_params))));
 
 $screen = pg_fetch_array(pg_query("SELECT * FROM status_screens WHERE mac ".(isset($_REQUEST["mac"])? " = '".$_REQUEST["mac"]."'" : "IS NULL").";"));
 $elements = pg_fetch_all(pg_query("SELECT status_screens_elements.*, status_elements.name FROM status_screens_elements INNER JOIN status_elements ON status_screens_elements.element_id = status_elements.id WHERE status_screens_elements.screen_id = ".$screen["id"].";"));
