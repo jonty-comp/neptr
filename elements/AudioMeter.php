@@ -1,6 +1,6 @@
 <?php
 
-class AudioMeter {
+class AudioMeter extends Element {
 	
 	function output($args) {
 		echo("

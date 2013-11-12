@@ -1,6 +1,6 @@
 <?php
 
-class VNCViewer {
+class VNCViewer extends Element {
 	
 	function output($attrs) {
 		echo("

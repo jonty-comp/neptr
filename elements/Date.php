@@ -1,6 +1,6 @@
 <?php
 
-class Date {
+class Date extends Element {
 
 	public function output($args) {
 		$id = rand(0,100000);

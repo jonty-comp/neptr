@@ -1,6 +1,6 @@
 <?php
 
-class CircleLineClock {
+class CircleLineClock extends Element {
 
 	public function output($args = NULL) {
 		echo("

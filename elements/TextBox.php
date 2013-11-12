@@ -1,6 +1,6 @@
 <?php
 
-class TextBox {
+class TextBox extends Element {
 	
 	public function output($args) {
 		echo("

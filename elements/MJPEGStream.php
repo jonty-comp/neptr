@@ -1,6 +1,6 @@
 <?php
 
-class MJPEGStream {
+class MJPEGStream extends Element {
 	
 	function output($args) {
 		$id = rand(0,100000);

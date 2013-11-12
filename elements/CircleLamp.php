@@ -1,6 +1,6 @@
 <?php
 
-class CircleLamp {
+class CircleLamp extends Element {
 	
 	public function output($args) {
 			$id = rand(0,100000);

@@ -1,6 +1,6 @@
 <?php
 
-class BarLamp {
+class BarLamp extends Element {
 	
 	public function output($args) {
 		$id = rand(0,100000);
