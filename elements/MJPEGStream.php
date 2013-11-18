@@ -10,7 +10,7 @@ class MJPEGStream extends Element {
 				setInterval(function() { $('#".$id."').attr('src', '".$args["url"]."'); }, 60000);
 			})
 			</script>
-			<img id=\"".$id."\" src=\"".$args["url"]."\" style=\"width:100%; display: table-cell; vertical-align: center;\"></img>");
+			<img id=\"".$id."\" src=\"".$args["url"]."\" style=\"width:100%; height: 100%; display: table-cell; vertical-align: center;\"></img>");
 	}
 
 }
