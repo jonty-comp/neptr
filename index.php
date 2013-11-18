@@ -53,7 +53,7 @@ define(GRID_ROWS, $screen->rows);
 
 			function startWebsocket() {
 					console.log('Starting websocket...');
-					websocket = new WebSocket('ws://ext1.ext.radio.warwick.ac.uk:443');
+					websocket = new WebSocket('ws://radio.warwick.ac.uk/neptr/endpoint');
 					websocket.onopen = function(e) { onOpen(e) };
 					websocket.onclose = function(e) { onClose(e) };
 					websocket.onmessage = function(e) { onMessage(e) };
