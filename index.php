@@ -17,7 +17,6 @@ function __autoload($class_name) {
 ScreensDB::connect($db_params);
 
 $screen = Screens::get_by_mac($_REQUEST["mac"]);
-$screen_elements = ScreenElements::get_by_screen($screen);
 
 define(GRID_COLS, $screen->columns);
 define(GRID_ROWS, $screen->rows);
@@ -83,20 +82,17 @@ define(GRID_ROWS, $screen->rows);
 		<?php 
 			if($_GET["debug"] == TRUE) for($k = 0; $k < GRID_ROWS; $k++) for($l = 0; $l < GRID_COLS; $l++) echo("<div class=\"cell debug width-1 height-1 x-offset-".$l." y-offset-".$k."\"></div>\n"); 
 
-			if($screen_elements) {
-				foreach($screen_elements as $screen_element) {
-					$element = $screen_element->get_element();
-					$params = $screen_element->get_parameters();
+			foreach($screen->get_elements() as $screen_element) {
+				$element = $screen_element->get_element();
+				$params = $screen_element->get_parameters();
 
-					$parameters = array();
-					if($params) foreach($params as $param) $parameters[$param->name] = $param->value;
-				
-					echo("<div class=\"cell width-".$screen_element->width." height-".$screen_element->height." x-offset-".$screen_element->x_offset." y-offset-".$screen_element->y_offset."\" >\n");
-					$element->output($parameters);
-					echo("</div>\n");
-				}
+				$parameters = array();
+				if($params) foreach($params as $param) $parameters[$param->name] = $param->value;
+			
+				echo("<div class=\"cell width-".$screen_element->width." height-".$screen_element->height." x-offset-".$screen_element->x_offset." y-offset-".$screen_element->y_offset."\" >\n");
+				$element->output($parameters);
+				echo("</div>\n");
 			}
-
 		?>
 	</body>
 </html>

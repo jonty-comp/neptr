@@ -9,7 +9,9 @@ class Screens {
 
 class Screen {
 
-
+	public function get_elements() {
+		return ScreenElements::get_by_screen($this);
+	}
 
 }
 
