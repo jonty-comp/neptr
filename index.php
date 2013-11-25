@@ -16,7 +16,11 @@ function __autoload($class_name) {
 
 ScreensDB::connect($db_params);
 
-$screen = Screens::get_by_mac($_REQUEST["mac"]);
+if(isset($_REQUEST["mac"])) $screen = Screens::get_by_mac($_REQUEST["mac"]);
+else if(isset($_REQUEST["id"])) $screen = Screens::get_by_id($_REQUEST["id"]);
+else exit("No screen specified!");
+
+if(!$screen) exit("Invalid screen specified!");
 
 define(GRID_COLS, $screen->columns);
 define(GRID_ROWS, $screen->rows);
