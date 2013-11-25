@@ -38,7 +38,7 @@ class ScreensDB {
 
 		public static function select($query, $return_class = NULL, $as_array = false) {
 			$results = self::query("SELECT ".$query);
-			if(pg_num_rows($results) == 0) return NULL;
+			if(pg_num_rows($results) == 0 && $as_array == false) return NULL;
 			if(pg_num_rows($results) == 1 && $as_array == false) {
 				if($return_class == NULL) {
 					if(pg_num_fields($results) == 1) return pg_fetch_result($results,0,0);
