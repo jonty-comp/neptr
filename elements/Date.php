@@ -9,7 +9,7 @@ class Date extends Element {
 
 		echo("
 		<style>
-			#date-".$id." { font-weight: bold; font-size: ".$args["font_size"]."em; vertical-align: middle; margin-top: ".$args["margin_top"]."; }
+			#date-".$id." { text-align: center; font-weight: bold; font-size: ".$args["font_size"]."em; vertical-align: middle; margin-top: ".$args["margin_top"]."; }
 		</style>
 		<script>
 			$().ready(function() {

@@ -6,7 +6,7 @@ class IdiotTime extends Element {
 		$id = rand(0,100000);
 		echo("
 			<style>
-					#idiot_clock_".$id." { font-size: ".$args["font_size"]."em; margin-top: ".$args["margin_top"]."px; }
+					#idiot_clock_".$id." { text-align: center; font-size: ".$args["font_size"]."em; margin-top: ".$args["margin_top"]."px; }
 					#idiot_clock_".$id." span { display: none; }
 					#idiot_clock_".$id." span.show { display: inline; }
 			</style>

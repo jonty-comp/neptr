@@ -30,7 +30,7 @@ define(GRID_ROWS, $screen->rows);
 		<style>
 			@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
-			html,body { width: 100%; height: 100%; margin: 0; background: #000; color: #fff; font-family: 'Droid Sans', sans-serif; display: table; text-align: center; position: absolute; overflow: hidden;}
+			html,body { width: 100%; height: 100%; margin: 0; background: #000; color: #fff; font-family: 'Droid Sans', sans-serif; display: table; position: absolute; overflow: hidden;}
 			.cell { <?php if($_GET["debug"] == TRUE) echo("border: 1px solid #888;") ?> box-sizing: border-box; display: table-cell; vertical-align: middle; position: absolute; }
 			<?php if($_GET["debug"] == TRUE) echo(".debug { border: 1px solid #222; }");
 

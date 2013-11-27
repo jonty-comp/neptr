@@ -9,8 +9,8 @@ class CircleLineClock extends Element {
 				.analogue_marker { border-radius: 50%; border-color: red; background: red; width: 4%; height: 4%; position: absolute; }
 				.analogue_digital_clock_outer { width: 100%; height: 100%; display: table; position: absolute; }
 				.analogue_digital_clock_inner { display: table-cell; vertical-align: middle; }
-				#analogue_digital_clock_hourmin { font-size: ".$args["font_size"]."em; color: red; font-family: 'Share Tech Mono'; line-height: 70%; }
-				#analogue_digital_clock_sec { font-size: ".($args["font_size"] * 0.6)."em; color: red; font-family: 'Share Tech Mono'; position: absolute; width: 100%; }
+				#analogue_digital_clock_hourmin { text-align: center; font-size: ".$args["font_size"]."em; color: red; font-family: 'Share Tech Mono'; line-height: 70%; }
+				#analogue_digital_clock_sec { text-align: center; font-size: ".($args["font_size"] * 0.6)."em; color: red; font-family: 'Share Tech Mono'; position: absolute; width: 100%; }
 
 			</style>
 

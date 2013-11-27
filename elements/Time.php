@@ -9,7 +9,7 @@ class Time extends Element {
 
 		echo("
 		<style>
-			#time-".$id." { font-weight: bold; font-size: ".$args["font_size"]."em; vertical-align: middle; margin-top: ".$args["margin_top"]."; }
+			#time-".$id." { text-align: center; font-weight: bold; font-size: ".$args["font_size"]."em; vertical-align: middle; margin-top: ".$args["margin_top"]."; }
 		</style>
 		<script>
 			$().ready(function() {
