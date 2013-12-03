@@ -3,7 +3,7 @@
 class ScreenElements {
 	
 	public function get_by_screen($screen) {
-		return ScreensDB::select("* FROM status_screens_elements WHERE screen_id = ".$screen->id, "ScreenElement", true);
+		return ScreensDB::select("* FROM status_screens_elements WHERE screen_id = ".$screen->id." ORDER BY id ASC", "ScreenElement", true);
 	}
 
 }
