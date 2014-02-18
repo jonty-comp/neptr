@@ -21,7 +21,7 @@ echo("
 
 		window.onscriptsload = function () {
 			rfb_".$id." = new RFB({'target': \$D('noVNC_canvas_".$id."'), 'view_only': false });
-			rfb_".$id.".connect('".$_GET["host"]."', '".$_GET["port"]."', '".$_GET["password"]."', '');
+			rfb_".$id.".connect('".$_GET["host"]."', '".$_GET["port"]."', '".$_GET["password"]."', '".$_GET["path"]."');
 			setTimeout('rfb_".$id.".sendKey();', 2000);
 		};
 		</script>
