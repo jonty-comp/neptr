@@ -47,8 +47,8 @@ define(GRID_ROWS, $screen->rows);
 			}
 			?>
 		</style>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/moment.min.js"></script>
+		<script type="text/javascript" src="assets/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/moment.min.js"></script>
 		<script>
 			var websocket;
 			var connection = false;
