@@ -93,7 +93,7 @@ define(GRID_ROWS, $screen->rows);
 				$parameters = array();
 				if($params) foreach($params as $param) $parameters[$param->name] = $param->value;
 			
-				echo("<div class=\"cell width-".$screen_element->width." height-".$screen_element->height." x-offset-".$screen_element->x_offset." y-offset-".$screen_element->y_offset."\" >\n");
+				echo("<div class=\"cell width-".$screen_element->width." height-".$screen_element->height." x-offset-".$screen_element->x_offset." y-offset-".$screen_element->y_offset."\" data-element=\"".$screen_element->id."\">\n");
 				$element->output($parameters);
 				echo("</div>\n");
 			}

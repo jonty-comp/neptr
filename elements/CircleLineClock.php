@@ -60,7 +60,7 @@ class CircleLineClock extends Element {
 			</div>
 
 			<div style=\"width: 90%; height: 90%; padding: 5%; position: relative\">
-				<div style=\"width: 90%; height: 90%; padding: 5%; float: left; position: relative;\">
+				<div style=\"width: 100%; height: 100%; float: left; position: relative;\">
 					<div style=\"width:100%; height: 100%; position: relative\">
 					");
 		$x = 0;
@@ -75,7 +75,7 @@ class CircleLineClock extends Element {
 		echo("
 					</div>
 				</div>
-				<div style=\"width:100%; height: 100%; position: relative\">
+				<div style=\"width:90%; height: 90%; margin: 5%; position: relative\">
 				");
 		$x = 0;
 		while($x < 360) {
